@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TestTimezone — Practice tests & smart analytics</title>
+  <meta name="description" content="Free practice tests, instant scoring and actionable analytics for students.">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- === Google AdSense (only add after you get approved and you're using a custom domain) ===
+       1) Replace ca-pub-XXXXXXXXXXXX with your AdSense publisher ID.
+       2) Remove the comment wrappers below when you're ready to serve ads.
+  -->
+  <!--
+  <script data-ad-client="ca-pub-XXXXXXXXXXXX" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  -->
+
+  <!-- Fallback favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    /* Minimal CSS to make page look decent without frameworks */
+    :root {
+      --bg: #0f172a;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #06b6d4;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#071028 0%, #071a2a 100%);color:#e6eef8;line-height:1.5}
+    .wrap{max-width:1100px;margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#042024}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:36px;align-items:start}
+    .card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:12px}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:#002528;border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .feature{background:var(--glass);padding:12px;border-radius:8px;color:var(--muted)}
+    .ads-slot{margin:18px 0;padding:10px;border-radius:8px;background:linear-gradient(90deg, rgba(6,182,212,0.06), rgba(99,102,241,0.02));text-align:center;color:var(--muted)}
+    .pricing{display:flex;gap:12px;margin-top:18px}
+    .plan{flex:1;padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    footer{margin-top:40px;color:var(--muted);font-size:13px;text-align:center;padding-bottom:60px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;gap:14px}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .features{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">TZ</div>
+        <div>
+          <div style="font-weight:700">TestTimezone</div>
+          <div style="font-size:12px;color:var(--muted)">Practice tests · Instant analytics</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Premium</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Practice tests that actually tell you what to improve</h1>
+          <p class="lead">Take mock tests, get instant scoring, and discover weak topics with AI-powered insights. Free for students — premium analytics and downloadable reports available.</p>
+          <div class="cta">
+            <button class="btn" onclick="location.href='/app'">Start a Free Test</button>
+            <button class="btn alt" onclick="location.href='#pricing'">See Premium</button>
+          </div>
+
+          <!-- Ad placeholder: show only to non-adblock users or after AdSense approval -->
+          <div class="ads-slot" id="ads-top">
+            <!-- If you have AdSense, uncomment the ins block below and remove this placeholder -->
+            <!--
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXX"
+                 data-ad-slot="YYYYYYYYYY"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            -->
+            Sponsored tools & recommendations
+          </div>
+
+          <div id="features" class="features">
+            <div class="feature">
+              <strong>Instant scoring</strong>
+              <div class="muted">Auto-graded tests with per-question feedback</div>
+            </div>
+            <div class="feature">
+              <strong>Topic analytics</strong>
+              <div class="muted">See weaknesses and recommended practice sets</div>
+            </div>
+            <div class="feature">
+              <strong>Downloadable reports</strong>
+              <div class="muted">PDF scorecards for applications & records</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Another ad block or affiliate slot (optional) -->
+        <div class="card" style="margin-top:14px">
+          <h3>Sponsored Resources</h3>
+          <p class="lead" style="margin-top:8px">Coaching partners, books and paid courses we trust — earn a commission when users purchase through these links.</p>
+          <div style="margin-top:10px">
+            <a href="#" style="color:var(--accent);text-decoration:none">Browse recommended courses →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Sign-up, pricing & microtransactions -->
+      <aside>
+        <div class="card">
+          <h3>Get personalized analytics</h3>
+          <p class="lead">Free users get basic summary. Upgrade to Pro for full reports and AI-driven study plan.</p>
+
+          <div class="pricing" id="pricing">
+            <div class="plan">
+              <div style="font-weight:700">Free</div>
+              <div style="margin-top:8px;color:var(--muted)">Unlimited practice tests · Basic scoring</div>
+            </div>
+            <div class="plan" style="border:1px solid rgba(255,255,255,0.04)">
+              <div style="font-weight:700">Pro — ₹199 / month</div>
+              <div style="margin-top:8px;color:var(--muted)">Full analytics · Downloadable PDF scorecard · Priority support</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <button class="btn" onclick="location.href='/signup'">Create account</button>
+            <button class="btn alt" style="margin-left:8px" onclick="location.href='/login'">Log in</button>
+          </div>
+
+          <!-- Small micro-transaction example: PDF report -->
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Buy a one-time downloadable detailed report — ₹29</div>
+        </div>
+
+        <!-- Newsletter / lead-capture -->
+        <div class="card" style="margin-top:14px">
+          <h4>Get exam tips</h4>
+          <p style="color:var(--muted);font-size:13px;margin-top:6px">Weekly practice problems & high-yield tips.</p>
+          <!-- Replace action with Mailchimp / ConvertKit form action -->
+          <form id="newsletter" onsubmit="event.preventDefault(); alert('Thanks — check your email (replace with real signup).')">
+            <input type="email" required placeholder="your@email.com"
+                   style="width:100%;padding:10px;border-radius:8px;border:none;margin-top:8px;background:#071a2a;color:#e6eef8">
+            <button class="btn" style="width:100%;margin-top:10px">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Small affiliate / ad slot -->
+        <div class="card" style="margin-top:14px;text-align:center">
+          <div class="ads-slot">
+            Affiliate / sponsor
+            <!-- Example: a coaching partner or book ad -->
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="contact">
+      <div style="margin-bottom:8px">© <strong>TestTimezone</strong> — Built for students. <a href="/terms" style="color:var(--muted);text-decoration:none">Terms</a> · <a href="/privacy" style="color:var(--muted);text-decoration:none">Privacy</a></div>
+      <div style="color:var(--muted)">Want to monetize? Consider combining ads, microtransactions (PDF reports), and affiliate partnerships — this lowers the traffic required to hit revenue goals.</div>
+    </footer>
+  </div>
+
+  <script>
+    // If you include AdSense, call push after the page loads.
+    // Example (uncomment when AdSense script is added above):
+    // (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+    // Lightweight analytics placeholder:
+    (function(){
+      if (!localStorage.getItem('tz_visit')) {
+        localStorage.setItem('tz_visit', Date.now());
+        // Here you can fire an analytics pixel or send a fetch to your backend
+        // fetch('/api/visit', {method:'POST'});
+      }
+    })();
+  </script>
+</body>
+</html>
